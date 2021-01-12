@@ -17,7 +17,7 @@ chmod 600 /root/.ssh/authorized_keys
 ###Yum config
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install -y git ansible
-apt install -y ansible git
+apt install -y git ansible
 git clone https://github.com/cape-sh/cape-ansible.git
 cd cape-ansible/
 PvtIP=`hostname -i | awk '{print $1}'`

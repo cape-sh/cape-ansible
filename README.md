@@ -1,5 +1,5 @@
 
-### Install CAPE
+### Install CAPE (For CENTOS7/RHEL7)
 
 > There are 2 options for accessing CAPE. Follow one of the options below as "root" user on the machine that you want to deploy to.
 

@@ -16,8 +16,8 @@ cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
 ###Yum config
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum install -y git ansible
-apt install -y git ansible
+yum install -y git ansible  #for centos
+apt install -y git ansible  #for  ubuntu
 git clone https://github.com/cape-sh/cape-ansible.git
 cd cape-ansible/
 PvtIP=`hostname -i | awk '{print $1}'`

@@ -20,7 +20,8 @@ yum install -y git ansible #for centos
 apt install -y git ansible #for ubuntu
 git clone https://github.com/cape-sh/cape-ansible.git
 cd cape-ansible/
-PvtIP=`hostname -i | awk '{print $1}'`
+netx=`ip route| grep default | awk '{print $3}' | cut -f1-3 -d.`   #find linux default network 
+PvtIP=`hostname -I | tr " " "\n" | grep $netx`      # allocate default pvt IP to script
 PubIP=`curl https://api.ipify.org/`
 
 sed -i  "s#server_master_ip#$PvtIP#g"  inventory/hosts.ini

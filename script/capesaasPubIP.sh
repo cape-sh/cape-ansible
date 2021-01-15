@@ -22,7 +22,7 @@ git clone https://github.com/cape-sh/cape-ansible.git
 cd cape-ansible/
 PvtIP=`hostname -i | awk '{print $1}'`
 PubIP=`curl https://api.ipify.org/`
-sed -i  "s#server_master_ip#$PvtIP#g"  inventory/hosts.ini
+sed -i  "s#server_master_ip#$PubIP#g"  inventory/hosts.ini
 sed  -i "s#server_master_ip#$PubIP#g"  roles/cape/tasks/main.yml
 ansible-playbook site.yml
 echo `date` >> /tmp/timeflag

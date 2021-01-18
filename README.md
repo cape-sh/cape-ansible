@@ -3,26 +3,33 @@
 
 > There are 2 options for accessing CAPE. Follow one of the options below as "root" user on the machine that you want to deploy to.
 
-Option 1: 
+Before getting started know:
 
-Access CAPE UI with a local private IP env.
+- Private IP address is used with a local or on premise network and public IP address is used outside the network. 
+- Public IP address is provided by ISP, Internet Service Provider.
 
->   Eg: You and your VM are at home and you want to access using a private IP e.g., 192.168.1.7
+#### Deployment Steps: 
+
+- Option 1 : 
+
+**TO Access CAPE UI on a local VM using private IP env.**
+
+>   **Eg**: You and your VM are at home and you want to access using a private IP e.g., 192.168.1.7
  
 ```bash
-curl https://raw.githubusercontent.com/cape-sh/cape-ansible/master/script/capesaaPvtIP.sh > capesaaPvtIP.sh
-sh capesaaPvtIP.sh
+$ curl https://raw.githubusercontent.com/cape-sh/cape-ansible/master/script/capesaaPvtIP.sh > capesaaPvtIP.sh
+$ sh capesaaPvtIP.sh
 ```
 
-Option 2:
+- Option 2:
 
-Access CAPE UI with a public IP env.
+**TO Access CAPE UI on Remote or Cloud VM with public IP env.**
 
->   Eg: Your VM is in the cloud and has a public IP e.g., 13.103.25.99
+>   **Eg**: Your VM is in the cloud and has a public IP e.g., 13.103.25.99
 
 ```bash
-curl  https://raw.githubusercontent.com/cape-sh/cape-ansible/master/script/capesaasPubIP.sh > capesaasPubIP.sh
-sh capesaasPubIP.sh
+$ curl  https://raw.githubusercontent.com/cape-sh/cape-ansible/master/script/capesaasPubIP.sh > capesaasPubIP.sh
+$ sh capesaasPubIP.sh
 ```
 ---
 
